@@ -52,7 +52,7 @@ string Analyze(string str, int size){
     
     while ((strplace + size) <= str.length()){
         string substring = str.substr(strplace, size);
-        //cout << "(" << strplace << "," << size << ") : " << substring << "\n";
+        // TEST: cout << "(" << strplace << "," << size << ") : " << substring << "\n";
         //check if in map, if not add new key with substring and make count (value) 1. Else: add one to key's value.
         if (substringMap.find(substring) == substringMap.end())
         {
@@ -61,6 +61,7 @@ string Analyze(string str, int size){
                 maxValue = 1;
                 maxKey = substring;
             }
+            // TEST: cout << "map[" << substring << "]: " << substringMap[substring] << "\n";
         }
         else{
             int tempValue = ++substringMap[substring];
@@ -68,6 +69,7 @@ string Analyze(string str, int size){
                 maxValue = tempValue;
                 maxKey = substring;
             }
+            // TEST: cout << "map[" << substring << "]: " << substringMap[substring] << "\n";
         }
         strplace += 1;
     }
