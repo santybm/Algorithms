@@ -6,6 +6,7 @@
 //  Copyright © 2016 Santiago Beltran. All rights reserved.
 //
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
 #include <map>
@@ -23,7 +24,7 @@ int main(int argc, const char * argv[]) {
     
     //store arguments accordingly. TEST TO BE IMPLEMENTED
     string analysisStr = argv[1];
-    int analysisInt = stoi(argv[2]);
+    int analysisInt = atoi(argv[2]);
     
     if (analysisInt < 0 or analysisInt > 10){
         cout << "Error. Size not valid. Please enter a value between 0 and 10. \n";

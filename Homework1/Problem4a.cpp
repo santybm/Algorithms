@@ -44,7 +44,7 @@ long BinarySum(string fileName){
     
     ifstream file1;
     //try to open file
-    file1.open(fileName);
+    file1.open(fileName.c_str());
     if (!file1)
     {
         throw 0;
