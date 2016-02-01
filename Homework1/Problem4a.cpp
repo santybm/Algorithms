@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
         
         }
         catch (int e){
-            if (e == 1){
+            if (e == 0){
                 cout << "Error opening file. Try again." << "\n";
             }
             else{
@@ -47,7 +47,7 @@ long BinarySum(string fileName){
     file1.open(fileName);
     if (!file1)
     {
-        throw 1;
+        throw 0;
     }
     //scan file
     string bline;
